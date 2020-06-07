@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormUserDetails from './FormUserDetails';
 
 class UserForm extends Component{
 
@@ -18,6 +19,7 @@ class UserForm extends Component{
         this.setState({
             step : step + 1
         });
+        console.log(this.state);
     }
 
     // go back to previous step
@@ -28,11 +30,10 @@ class UserForm extends Component{
         });
     }
 
-    handleChange = (event) =>{
+    handleChange =  event  =>{
         this.setState({
             [event.target.name] : event.target.value
         });
-
     } 
 
     render(){
